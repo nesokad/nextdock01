@@ -2,7 +2,11 @@ import { db } from "@/db";
 import Image from "next/image";
 
 export default function Home() {
-  db.exec("CREATE TABLE posts ( id INTEGER PRIMARY KEY, title TEXT )")
+  //db.exec("CREATE TABLE posts ( id INTEGER PRIMARY KEY, title TEXT )")
+
+  db.exec("INSERT INTO posts (title) VALUES ('some post')")
+
+
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
